@@ -1,0 +1,12 @@
+parameters:
+
+services:
+    http_capture.response_listener:
+        class: Pequin\HttpCaptureBundle\HttpCapture
+        arguments: [ @logger, %http_capture.enabled% ]
+        calls:
+            - [ setMaxLength, [ %http_capture.max_length% ] ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+            - { name: monolog.logger, channel: http_capture }
+
