@@ -30,8 +30,8 @@ http_capture:
 
 TODO
 ----
-* Write tests.
-* Optional capture info (security info, time taken to service request, memory usage, etc).
-* Test performance with large request/responses.
+* Write tests and add to TravisCI.
+* Additional capture info: security, time taken to service request, memory usage, form-encoded data, truncated multipart data.
 * Add composer definition and setup automated packagist deployment on from tags.
-* Add to TravisCI.
+* Test performance with large request/responses.
+
