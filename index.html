@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>HTTP Capture Bundle by Pequin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>HTTP Capture Bundle</h1>
+        <p>A Symfony2 bundle that logs HTTP request and response data</p>
+        <p class="view"><a href="https://github.com/Pequin/HttpCaptureBundle">View the Project on GitHub <small>Pequin/HttpCaptureBundle</small></a></p>
+        <ul>
+          <li><a href="https://github.com/Pequin/HttpCaptureBundle/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Pequin/HttpCaptureBundle/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Pequin/HttpCaptureBundle">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>A Symfony2 bundle that logs HTTP request and response information for debugging proposes. It can be switched on and off at will to help track down errors.</p>
+
+<p>This bundle was initially developed to help analyse REST web service interaction. The captured information is sent to the application logger (Monolog) over the channel "http_capture". With Symfony 2.0 all logging messages are directed all message handlers. Symfony 2.1 will resolve this issue and it will be simple for all messages on the http_capture channel to be directed to a dedicated logging handler (file, database, monitoring system, etc...)</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Write tests.</li>
+<li>Optional capture info (security info, time taken to service request, memory usage, etc).</li>
+<li>Test performance with large request/responses.</li>
+<li>Add composer definition and setup automated packagist deployment on from tags.</li>
+<li>Add to TravisCI.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Pequin">Pequin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
