@@ -24,7 +24,7 @@ target=/bundles/Pequin/HttpCaptureBundle
 1. Configure parameters for your application:
 ```yaml
 http_capture:
-    enabled:  true
+    enabled:  1
     max_length: 1000
 ```
 
