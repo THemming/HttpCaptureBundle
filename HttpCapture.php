@@ -60,6 +60,8 @@ class HttpCapture
             $responseContent = substr($responseContent, 0, $this->maxLength) . '...';
         }
 
+        $responseStatusCode = $response->getStatusCode();
+
         $this->logger->info(
             <<<INFO
 
@@ -70,6 +72,7 @@ Remote Host: {$request->server->get('REMOTE_ADDR')}
 {$requestHeadersStr}
 {$requestContent}
 = Response =
+StatusCode: {$responseStatusCode}
 {$responseHeadersStr}
 {$responseContent}
 INFO
