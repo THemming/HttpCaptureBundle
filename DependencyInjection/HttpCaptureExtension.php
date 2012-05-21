@@ -23,7 +23,7 @@ class HttpCaptureExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         // Inject parameters into container with the worked out values from the Configuration class
-        $container->setParameter($this->getAlias() . '.enabled', $config['enabled']);
+        $container->setParameter($this->getAlias() . '.enabled', (bool) $config['enabled']);
         $container->setParameter($this->getAlias() . '.max_length', $config['max_length']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));

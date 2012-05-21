@@ -21,8 +21,11 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root($extension->getAlias());
 
+        // The enabled parameters is 0 or 1 in the parameters.ini/config.yml
+        // but it will be converted to boolean by the bundle extension.
+        // The reason is that the parameters.ini file cannot handle boolean true/false
         $rootNode->children()
-            ->booleanNode('enabled')->defaultFalse()->end()
+            ->scalarNode('enabled')->defaultValue(0)->end()
             ->scalarNode('max_length')->defaultNull()->end()
             ->end();
 
