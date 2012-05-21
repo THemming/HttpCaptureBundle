@@ -8,20 +8,26 @@ Install & Configuration
 -----------------------
 These instruction are for Symfony 2.0.x.
 
-1. Add this repo to you `deps` file:
+Add this repo to you `deps` file:
 ```
 [HttpCaptureBundle]
-git=http://github.com/Pequin/HttpCaptureBundle.git
-target=/bundles/Pequin/HttpCaptureBundle
+  git=http://github.com/Pequin/HttpCaptureBundle.git
+  target=/bundles/Pequin/HttpCaptureBundle
 ```
-1. Run `./bin/vendors install`.
-1. Add to `AppKernel.php` in the `registerBundles()` function:
-    new Pequin\HttpCaptureBundle\HttpCaptureBundle(),
-1. Add to `autoload.php`:
+
+Run `./bin/vendors install`
+
+Add to `AppKernel.php` in the `registerBundles()` function:
+```php
+new Pequin\HttpCaptureBundle\HttpCaptureBundle(),
 ```
+
+Add to `autoload.php`:
+```php
 'Pequin'           => __DIR__.'/../vendor/bundles',
 ```
-1. Configure parameters for your application:
+
+Configure parameters for your application:
 ```yaml
 http_capture:
     enabled:  1
