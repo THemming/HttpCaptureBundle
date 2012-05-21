@@ -1,4 +1,10 @@
 <?php
+/**
+ * This can be injected into the Kernel Response event and will log request/response info to the 
+ * application logger.
+ * 
+ * @author Tim Hemming <timhemming@gmail.com>
+ */
 namespace Pequin\HttpCaptureBundle;
 
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
@@ -66,7 +72,6 @@ Remote Host: {$request->server->get('REMOTE_ADDR')}
 = Response =
 {$responseHeadersStr}
 {$responseContent}
-INFO
-        );
+INFO, array('http_capture'));
     }
 }
