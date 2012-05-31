@@ -2,7 +2,7 @@ HTTP Capture Bundle
 ===================
 A Symfony2 bundle that logs HTTP request and response information for debugging proposes. It can be switched on and off at will to help track down errors.
 
-This bundle was initially developed to help analyse REST web service interaction. The captured information is sent to the application logger (Monolog) over the channel "http_capture". With Symfony 2.0 all logging messages are directed all message handlers. Symfony 2.1 will resolve this issue and it will be simple for all messages on the http_capture channel to be directed to a dedicated logging handler (file, database, monitoring system, etc...)
+This bundle was initially developed to help analyse REST web service interaction. The captured information is sent to the application logger (Monolog) over the channel "http_capture". With Symfony 2.0 all logging messages are directed to all message handlers. Symfony 2.1 will resolve this issue and it will be simple for all messages on the http_capture channel to be directed to a dedicated logging handler (file, database, monitoring system, etc...)
 
 Install & Configuration
 -----------------------
