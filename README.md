@@ -27,17 +27,24 @@ Add to `autoload.php`:
 'Pequin'           => __DIR__.'/../vendor/bundles',
 ```
 
-Configure parameters for your application:
+Configure parameters for your application, e.g. `config.yml`, `config_prod.yml`, etc:
 ```yaml
 http_capture:
     enabled:  1
     max_length: 1000
 ```
 
+Of course these values can be set as parameters for the `parameters.ini` file by setting them to something like:
+```yaml
+http_capture:
+    enable: %http_capture_enable%
+    max_length: %http_capture_max_length%
+```
+
 TODO
 ----
 * Write tests and add to TravisCI.
 * Additional capture info: security, time taken to service request, memory usage, form-encoded data, truncated multipart data.
-* Add composer definition and setup automated packagist deployment on from tags.
+* Symfony 2.1 branch. Add composer definition and setup automated packagist deployment.
 * Test performance with large request/responses.
 
