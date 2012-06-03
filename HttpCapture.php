@@ -53,23 +53,22 @@ class HttpCapture
         $requestContent = $request->getContent();
         if ($this->maxLength && strlen($requestContent) > $this->maxLength) {
             $requestContent = substr($requestContent, 0, $this->maxLength) . '...';
-        } elseif(strlen($requestContent) == 0) {
+        } elseif (strlen($requestContent) == 0) {
             $requestContent = 'Request content is empty';
         }
 
         $responseContent = $response->getContent();
         if ($this->maxLength && strlen($responseContent) > $this->maxLength) {
             $responseContent = substr($responseContent, 0, $this->maxLength) . '...';
-        } elseif(strlen($responseContent) == 0) {
+        } elseif (strlen($responseContent) == 0) {
             $responseContent = 'Response content is empty';
         }
 
         $responseStatusCode = $response->getStatusCode();
 
         $this->logger->info(
-            <<<INFO
+            <<<REQUEST
 
-== Start HTTP Capture ==
 = Request Info =
 Path: {$request->getPathInfo()}
 Method: {$request->getMethod()}
@@ -81,6 +80,12 @@ Remote Host: {$request->server->get('REMOTE_ADDR')}
 = Request Content=
 {$requestContent}
 
+REQUEST
+            , array('http_capture', 'request'));
+
+        $this->logger->info(
+            <<<RESPONSE
+
 = Response Info =
 StatusCode: {$responseStatusCode}
 
@@ -90,9 +95,7 @@ StatusCode: {$responseStatusCode}
 = Response Content =
 {$responseContent}
 
-== End HTTP Capture ==
-
-INFO
-            , array('http_capture'));
+RESPONSE
+            , array('http_capture', 'response'));
     }
 }
