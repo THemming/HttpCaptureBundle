@@ -1,0 +1,23 @@
+{
+    "name":"Pequin/HttpCaptureBundle",
+    "type":"library",
+    "description":"Symfony bundle to capture http request and response data in your logs.",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Tim Hemming",
+            "email":"tim@pequin.co.uk"
+        }
+    ],
+    "require":{
+        "php":">=5.3.2",
+        "symfony/http-kernel":">=2.0.0,<2.0.x-dev",
+        "monolog/monolog":"1.1.*"
+    },
+    "autoload":{
+        "psr-0":{
+            "Pequin\\HttpCaptureBundle":""
+        }
+    },
+    "target-dir":"Pequin/HttpCaptureBundle"
+}
