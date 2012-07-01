@@ -5,7 +5,7 @@
  *
  * @author Tim Hemming <timhemming@gmail.com>
  */
-namespace Pequin\HttpCaptureBundle;
+namespace THemming\HttpCaptureBundle;
 
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Monolog\Logger;

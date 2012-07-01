@@ -1,6 +1,6 @@
 <?php
 
-namespace Pequin\HttpCaptureBundle;
+namespace THemming\HttpCaptureBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

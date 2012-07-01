@@ -1,7 +1,7 @@
 <?php
-namespace Pequin\HttpCaptureBundle\Tests;
+namespace THemming\HttpCaptureBundle\Tests;
 
-use Pequin\HttpCaptureBundle\HttpCapture;
+use THemming\HttpCaptureBundle\HttpCapture;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\HttpKernel;

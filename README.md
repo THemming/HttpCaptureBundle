@@ -1,6 +1,6 @@
 HTTP Capture Bundle
 ===================
-[![Build Status](https://secure.travis-ci.org/Pequin/HttpCaptureBundle.png)](http://travis-ci.org/Pequin/HttpCaptureBundle)
+[![Build Status](https://secure.travis-ci.org/THemming/HttpCaptureBundle.png)](http://travis-ci.org/THemming/HttpCaptureBundle)
 
 A Symfony2 bundle that logs HTTP request and response information for debugging proposes. It can be switched on and off at will to help track down errors.
 
@@ -13,20 +13,20 @@ These instruction are for Symfony 2.0.x.
 Add this repo to you `deps` file:
 ```
 [HttpCaptureBundle]
-  git=http://github.com/Pequin/HttpCaptureBundle.git
-  target=/bundles/Pequin/HttpCaptureBundle
+  git=http://github.com/THemming/HttpCaptureBundle.git
+  target=/bundles/THemming/HttpCaptureBundle
 ```
 
 Run `./bin/vendors install`
 
 Add to `AppKernel.php` in the `registerBundles()` function:
 ```php
-new Pequin\HttpCaptureBundle\HttpCaptureBundle(),
+new THemming\HttpCaptureBundle\HttpCaptureBundle(),
 ```
 
 Add to `autoload.php`:
 ```php
-'Pequin'           => __DIR__.'/../vendor/bundles',
+'THemming'           => __DIR__.'/../vendor/bundles',
 ```
 
 Configure parameters for your application, e.g. `config.yml`, `config_prod.yml`, etc:

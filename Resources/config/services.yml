@@ -2,7 +2,7 @@ parameters:
 
 services:
     http_capture.response_listener:
-        class: Pequin\HttpCaptureBundle\HttpCapture
+        class: THemming\HttpCaptureBundle\HttpCapture
         arguments: [ @logger, %http_capture.enabled% ]
         calls:
             - [ setMaxLength, [ %http_capture.max_length% ] ]

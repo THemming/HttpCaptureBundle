@@ -1,6 +1,6 @@
 <?php
 
-namespace Pequin\HttpCaptureBundle\DependencyInjection;
+namespace THemming\HttpCaptureBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

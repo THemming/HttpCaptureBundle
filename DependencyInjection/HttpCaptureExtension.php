@@ -1,6 +1,6 @@
 <?php
 
-namespace Pequin\HttpCaptureBundle\DependencyInjection;
+namespace THemming\HttpCaptureBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
